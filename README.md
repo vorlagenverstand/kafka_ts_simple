@@ -2,8 +2,13 @@
 
 ### Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine.
 
+## Key Dependencies
+
 ## KafkaJS
 [KafkaJS](https://kafka.js.org/) is a node.js library to integrate with the apache Kafka message bus.
+
+## readlineSync
+[readlineSync](https://www.npmjs.com/package/readline-sync) Synchronous Readline for interactively running to have a conversation with the user via a console(TTY).
 
 ### Clone the repository and add the dependencies.
 
