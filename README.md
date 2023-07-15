@@ -48,7 +48,25 @@ const consumer = kafka.consumer({});
 > npm run start-consumer
 ```
 
-
 ### Go back to the producer, and start typing your data. 
+
+### How sending messages looks:
+```bash
+> kafka_ts_simple@1.0.0 start-producer
+> ts-node src/producer.ts
+
+{"level":"WARN","timestamp":"2023-07-15T01:02:09.123Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+Data: This is a test
+Data:
+```
+### How consuming messages looks:
+```bash
+> kafka_ts_simple@1.0.0 start-consumer
+> ts-node src/consumer.ts
+
+{"level":"INFO","timestamp":"2023-07-15T00:59:37.801Z","logger":"kafkajs","message":"[Consumer] Starting","groupId":"test-group"}
+{"level":"INFO","timestamp":"2023-07-15T00:59:59.713Z","logger":"kafkajs","message":"[ConsumerGroup] Consumer has joined the group","groupId":"test-group","memberId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","leaderId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","isLeader":true,"memberAssignment":{"test":[0]},"groupProtocol":"RoundRobinAssigner","duration":21911}
+Received:  { partition: 0, offset: '0', value: 'This is a test' }
+```
 
 ### Also you can see topics and messages in Kafka using [kafdrop](https://github.com/obsidiandynamics/kafdrop) or [kafkacat](https://github.com/edenhill/kcat)
