@@ -1,6 +1,6 @@
 # Simple Kafka Producer and Consumer with Typescript and KafkaJS
 
-### Prerequisites 
+## Prerequisites 
 Node & NPM – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
 
 Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine. 
