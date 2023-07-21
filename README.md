@@ -3,7 +3,13 @@
 ### Prerequisites 
 Node & NPM – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
 
-Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine (Open a console and type: `telnet 35.153.235.161 9092`). [How to enable/use Telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
+Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine. 
+
+Open a console and type: 
+```bash
+> telnet 35.153.235.161 9092
+``` 
+[How to enable/use telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
 
 ## Key Dependencies
 
@@ -71,5 +77,3 @@ Data:
 {"level":"INFO","timestamp":"2023-07-15T00:59:59.713Z","logger":"kafkajs","message":"[ConsumerGroup] Consumer has joined the group","groupId":"test-group","memberId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","leaderId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","isLeader":true,"memberAssignment":{"test":[0]},"groupProtocol":"RoundRobinAssigner","duration":21911}
 Received:  { partition: 0, offset: '0', value: 'This is a test' }
 ```
-
-### Also you can see topics and messages in Kafka using [kafdrop](https://github.com/obsidiandynamics/kafdrop) or [kafkacat](https://github.com/edenhill/kcat)
