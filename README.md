@@ -1,6 +1,9 @@
 # Simple Kafka Producer and Consumer with Typescript and KafkaJS
 
-### Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine.
+### Prerequisites 
+Node & NPM – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
+
+Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine. [How to use Telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
 
 ## Key Dependencies
 
