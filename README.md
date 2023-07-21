@@ -3,7 +3,7 @@
 ### Prerequisites 
 Node & NPM – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
 
-Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine. [How to use Telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
+Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine (Open a console and type: `telnet 35.153.235.161 9092`). [How to enable/use Telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
 
 ## Key Dependencies
 
