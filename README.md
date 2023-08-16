@@ -37,8 +37,12 @@ Kafka is a messaging system that safely moves data between systems. Depending on
 
 Although we commonly refer to the data in topics as "messages", there is no uniform shape that messages take. From Kafka's perspective, a message is just a key-value pair, where both key and value are just sequences of bytes. It is up to the data producer and the consumers to agree on a format. Commonly you will find plain-text schemaless messages in for example JSON, or binary formats with an enforced schema such as AVRO.
 
+### Objectives
+- Let's start by instantiating the KafkaJS client by pointing it towards at least one broker.
+- Now to produce a message to a topic, we'll create a producer using our client.
+- Finally, to verify that our message has indeed been produced to the topic, let's create a consumer to consume our message.
 
-### Key Dependencies
+### Dependencies
 
 ### KafkaJS
 [KafkaJS](https://kafka.js.org/) is a node.js library to integrate with the apache Kafka message bus.
@@ -116,3 +120,4 @@ Data:
 {"level":"INFO","timestamp":"2023-07-15T00:59:59.713Z","logger":"kafkajs","message":"[ConsumerGroup] Consumer has joined the group","groupId":"test-group","memberId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","leaderId":"test-app-e06312db-3ac3-43bb-a746-2d37e388ac29","isLeader":true,"memberAssignment":{"test":[0]},"groupProtocol":"RoundRobinAssigner","duration":21911}
 Received:  { partition: 0, offset: '0', value: 'This is a test' }
 ```
+### Congratulations, you just produced and consumed your first Kafka message!
