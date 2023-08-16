@@ -1,7 +1,26 @@
 # Simple Kafka Producer and Consumer with Typescript and KafkaJS
 
 ## Prerequisites 
-Node & NPM – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
+Node & NPM Installed – [Installing NVM on Windows 11](https://realworlddev.hashnode.dev/installing-nvm-on-windows-11)
+
+How to confirm Node & NPM are installed properly, first type:
+
+```bash
+> node -v
+```
+Expected result:
+```bash
+v18.16.1
+```
+Next type:
+
+```bash
+> npm -v
+```
+Expected result:
+```bash
+9.5.1
+```
 
 Before proceeding, ensure that you have access to an Apache Kafka instance from your local machine. 
 
@@ -11,22 +30,40 @@ Open a console and type:
 ``` 
 [How to enable/use telnet](https://support.intermedia.com/app/articles/detail/a_id/25172/~/what-is-telnet%3F-how-do-i-run-it%3F)
 
-## Key Dependencies
+## Overview & Objectives
 
-## KafkaJS
+### A Brief Intro to Kafka
+Kafka is a messaging system that safely moves data between systems. Depending on how each component is configured, it can act as a transport for real-time event tracking or as a replicated distributed database. Although it is commonly referred to as a queue, it is more accurate to say that it is something in between a queue and a database, with attributes and tradeoffs from both types of systems.
+
+Although we commonly refer to the data in topics as "messages", there is no uniform shape that messages take. From Kafka's perspective, a message is just a key-value pair, where both key and value are just sequences of bytes. It is up to the data producer and the consumers to agree on a format. Commonly you will find plain-text schemaless messages in for example JSON, or binary formats with an enforced schema such as AVRO.
+
+
+### Key Dependencies
+
+### KafkaJS
 [KafkaJS](https://kafka.js.org/) is a node.js library to integrate with the apache Kafka message bus.
 
-## readlineSync
+### readlineSync
 [readlineSync](https://www.npmjs.com/package/readline-sync) Synchronous Readline for interactively running to have a conversation with the user via a console(TTY).
+
+## Install/Setup
 
 ### Clone the repository and add the dependencies.
 
-### Navigate to the path created & run:
+Navigate to the path created & run:
 ```bash
 > npm i
 ```
+Expected result:
+```bash
+up to date, audited 115 packages in 2s
 
-## Implementation
+3 packages are looking for funding
+  run `npm fund` for details
+```
+## Code Structure
+
+### Implementation
 Let’s review the consumer and producer implementation.
 
 ### Kafka
@@ -58,6 +95,8 @@ const consumer = kafka.consumer({});
 ```
 
 ### Go back to the producer, and start typing your data. 
+
+## How to confirm that your code works fine (Definition of done)
 
 ### How sending messages looks:
 ```bash
